@@ -32,5 +32,5 @@ This script is made to assist with the setting up of several of the most popular
 I do appreciate any contributions from others to this script, and to contribute, please make a pull request and recommit to this repo. Thanks!
 
 # Contacts:
-Email: lambuibao@outlook.com
-Discord: mys31f#3981
+- Email: lambuibao@outlook.com
+- Discord: mys31f#3981
