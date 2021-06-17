@@ -19,14 +19,14 @@ This script is made to assist with the setting up of several of the most popular
 - <a href="https://github.com/FontManager/font-manager">Font manager</a>
 
 # To-do list:
-- [] Find a way to identify the distribution that the user is running.
-- [] Finish with Ubuntu based distributions.
-- [] Finish with Debian based distributions.
-- [] Finish with Arch based distributions.
-- [] Finish with Fedora.
-- [] Finish with CentOS/RHEL based distributions.
-- [] Finish with OpenSUSE based distributions.
-- [] Finish with Solus.
+- [ ] Find a way to identify the distribution that the user is running.
+- [ ] Finish with Ubuntu based distributions.
+- [ ] Finish with Debian based distributions.
+- [ ] Finish with Arch based distributions.
+- [ ] Finish with Fedora.
+- [ ] Finish with CentOS/RHEL based distributions.
+- [ ] Finish with OpenSUSE based distributions.
+- [ ] Finish with Solus.
 
 # Contributions:
 I do appreciate any contributions from others to this script, and to contribute, please make a pull request and recommit to this repo. Thanks!
