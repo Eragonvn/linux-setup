@@ -2,7 +2,7 @@
 distro = system("grep `ID` /etc/os-release")
 id_like = system("grep `ID_LIKE` /etc/os-release")
 
-#  
+# Ubuntu based distros
 if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu"
 	system 
 	puts "What browser would you like to install on your system?"
@@ -19,5 +19,5 @@ if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu"
 			elsif browser_choice_ubuntu.include?.downcase "opera"
 				system()
 
-#
+# Debian based distros
 elsif distro
