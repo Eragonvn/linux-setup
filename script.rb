@@ -5,14 +5,17 @@ id_like = system("grep "ID_LIKE=" /etc/os-release")
 # Ubuntu based distros
 if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == true
 	puts "We will run a system upgrade beforehand on the system to make sure everything's up-to-date."
+	# Each step will be done in order, from upgrading the system to installing the browser, gaming clients, office suites, creative apps, media apps, (font manager, optional, depending on user), communication apps
 	puts "What browser would you like to install on your system?"
 	puts "- Firefox"
 	puts "- Chromium"
 	puts "- Opera"
 	puts "- Vivaldi"
-	print "Pick a browser/browsers from the above list (you can choose multiple browsers) or press Q to quit: "
+	print "Pick a browser/browsers from the above list (you can choose multiple browsers) or press S to skip and Q to quit: "
+		# Browser installation process.
 		browser_choice_ubuntu = gets.chomp
-			if browser_choice_ubuntu.include?.downcase "firefox"
+			next if browser_choice_ubuntu.downcase == "s"
+			elsif browser_choice_ubuntu.include?.downcase "firefox"
 				system("sudo apt-get install firefox -y")
 				puts "Installation complete."
 			elsif browser_choice_ubuntu.include?.downcase "chromium"
@@ -30,6 +33,25 @@ if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == tr
 			elsif browser_choice_ubuntu.downcase == "q"
 				exit!
 			end
+	puts "Which gaming client would you like to download?"
+	puts "- Lutris"
+	puts "- Steam"
+	print "Pick (a) gaming client(s) from the above list (press S to skip, press Q to quit): "
+		gaming_choice_ubuntu = gets.chomp
+			next if gaming_choice_ubuntu.downcase == "s"
+			elsif gaming_choice_ubuntu.downcase.include? "lutris"
+				system("sudo add-apt-repository ppa:lutris-team/lutris -y")
+				system("sudo apt-get update")
+				system("sudo apt-get install lutris wine-staging winetricks -y")
+			elsif gaming_choice_ubuntu.downcase.include? "steam"
+				system("wget ") # Insert link for Steam deb file download
+				system("sudo dpkg -i steam_latest.deb")
+				system("sudo apt-get install -fy")
+				system("rm -f steam_latest.deb")
+			elsif gaming_choice_ubuntu.downcase == "q"
+				exit!
+			end
 
+	
 # Debian based distros
 elsif distro
