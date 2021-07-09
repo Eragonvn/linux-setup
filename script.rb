@@ -5,17 +5,14 @@ id_like = system("grep "ID_LIKE=" /etc/os-release")
 # Ubuntu based distros
 if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == true
 	puts "We will run a system upgrade beforehand on the system to make sure everything's up-to-date."
-	# Each step will be done in order, from upgrading the system to installing the browser, gaming clients, office suites, creative apps, media apps, (font manager, optional, depending on user), communication apps
 	puts "What browser would you like to install on your system?"
 	puts "- Firefox"
 	puts "- Chromium"
 	puts "- Opera"
 	puts "- Vivaldi"
-	print "Pick a browser/browsers from the above list (you can choose multiple browsers) or press S to skip and Q to quit: "
-		# Browser installation process.
+	print "Pick a browser/browsers from the above list (you can choose multiple browsers) or press Q to quit: "
 		browser_choice_ubuntu = gets.chomp
-			next if browser_choice_ubuntu.downcase == "s"
-			elsif browser_choice_ubuntu.include?.downcase "firefox"
+			if browser_choice_ubuntu.include?.downcase "firefox"
 				system("sudo apt-get install firefox -y")
 				puts "Installation complete."
 			elsif browser_choice_ubuntu.include?.downcase "chromium"
@@ -51,7 +48,5 @@ if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == tr
 			elsif gaming_choice_ubuntu.downcase == "q"
 				exit!
 			end
-
-	
 # Debian based distros
 elsif distro
