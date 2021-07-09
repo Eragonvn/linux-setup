@@ -22,16 +22,6 @@ This script is made to assist with the setting up of several of the most popular
 - Dependencies for different coding languages: Ruby, Node.js
 - Text editors/IDEs: Visual Studio Code, Atom, Sublime Text, IntelliJ, RubyMine
 
-# To-do list:
-- [ ] Find a way to identify the distribution that the user is running.
-- [ ] Finish with Ubuntu based distributions.
-- [ ] Finish with Debian based distributions.
-- [ ] Finish with Arch based distributions.
-- [ ] Finish with Fedora.
-- [ ] Finish with CentOS/RHEL based distributions.
-- [ ] Finish with OpenSUSE based distributions.
-- [ ] Finish with Solus.
-
 # Contributions:
 I do appreciate any contributions from others to this script, and to contribute, please make a pull request and recommit to this repo. Thanks!
 If you want anything to be added, please make an issue and write what you would want to have in here.
@@ -50,4 +40,5 @@ If you want anything to be added, please make an issue and write what you would 
 - Steam on CentOS/RHEL will be the Flatpak version instead.
 - Spotify on Fedora when installed from RPMFusion will come with LPF, which will have to be launched before having Spotify officially installed.
 - (Ruby only) Gems cannot be used globally on Arch due to different installation paths, please refer to <a href="https://wiki.archlinux.org/title/ruby#RubyGems"> this</a> to be able to use gems globally.
+- 
 - ... (will be updated.)
