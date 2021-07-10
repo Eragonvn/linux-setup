@@ -19,7 +19,7 @@ This script is made to assist with the setting up of several of the most popular
 - Media applications: VLC, MPV
 - <a href="https://github.com/FontManager/font-manager">Font manager</a>
 - Communication applications: Viber, Telegram, Signal, Discord
-- Dependencies for different coding languages: Ruby, Node.js
+- Dependencies for different coding languages: Ruby + Gems, Node.js + NPM, PHP, 
 - Text editors/IDEs: Visual Studio Code, Atom, Sublime Text, IntelliJ, RubyMine
 
 # Contributions:
@@ -33,12 +33,12 @@ If you want anything to be added, please make an issue and write what you would 
 # Dependencies:
 - Ruby
 - wget
-- <a href="https://rpmfusion.org/">RPMFusion (will be installed for Fedora and CentOS/RHEL based systems)</a>
-- <a href="https://github.com/Jguer/yay">yay and its dependencies (will be installed for Arch Linux based distributions)</a>
+- <a href="https://rpmfusion.org/">RPMFusion</a> (will be installed for Fedora and CentOS/RHEL based systems)
+- <a href="https://github.com/Jguer/yay">yay</a> and its dependencies (will be installed for Arch Linux based distributions)
 
 # Known trade-offs:
 - Steam on CentOS/RHEL will be the Flatpak version instead.
 - Spotify on Fedora when installed from RPMFusion will come with LPF, which will have to be launched before having Spotify officially installed.
 - (Ruby only) Gems cannot be used globally on Arch due to different installation paths, please refer to <a href="https://wiki.archlinux.org/title/ruby#RubyGems"> this</a> to be able to use gems globally.
 - 
-- ... (will be updated.)
+- ... (to be continued.)
