@@ -1,4 +1,6 @@
-# Parse information from /etc/os-release line with variable ID or ID_LIKE
+require 'colorize'
+
+# Parse information from /etc/os-release line with variable ID or ID_LIKE as this will give either the base distribution or the base of the distribution that the user is using.
 distro = system("grep "ID=" /etc/os-release")
 id_like = system("grep "ID_LIKE=" /etc/os-release")
 
@@ -7,10 +9,10 @@ if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == tr
 	puts "We will run a system upgrade beforehand on the system to make sure everything's up-to-date."
 	system("sudo apt-get update && sudo apt-get dist-upgrade -y")
 	puts "What browser would you like to install on your system?"
-	puts "- Firefox"
-	puts "- Chromium"
-	puts "- Opera"
-	puts "- Vivaldi"
+	puts "- Firefox".colorize(:color => :orange)
+	puts "- Chromium".colorize(:color => :blue, :background => :white)
+	puts "- Opera".colorize(:color => :red, :background => :white)
+	puts "- Vivaldi".colorize(:color => white, :background => :red)
 	print "Pick a browser/browsers from the above list (you can choose multiple browsers) or press Q to quit: "
 		browser_choice_ubuntu = gets.chomp
 			next if browser_choice_ubuntu.downcase == "s"
@@ -110,7 +112,7 @@ if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == tr
 	puts "- Inkscape"
 	puts "- DaVinci Resolve"
 	puts "- Audacity"
-	print "Pick (a) creator app(s) from the above list (press"
+	print "Pick (a) creator app(s) from the above list (press S to skip, press Q to quit): "
 		creator_choice_ubuntu = gets.chomp
 			next if creator_choice_ubuntu == "s"
 			elsif creator_choice_ubuntu.downcase.include? "kdenlive"
@@ -133,8 +135,15 @@ if distro.include?.downcase "ubuntu" or id_like.include?.downcase "ubuntu" == tr
 			elsif creator_choice_ubuntu.downcase == "q"
 				exit!
 			end
-	
-
+	puts "Which language's dependencies would you like to have installed?"
+	puts "- Ruby"
+	puts "- Node.js"
+	print "Pick (an) option(s) from the above list (press S to skip, press Q to quit): "
+		coding_choice_ubuntu = gets.chomp
+			next if coding_choice_ubuntu.downcase.include? "S"
+			elsif coding_choice_ubuntu.downcase.include? "ruby"
+				system("sudo apt-get install ruby-full -y")
+				system("sudo ")
 
 
 
