@@ -42,3 +42,5 @@ If you want anything to be added, please make an issue and write what you would 
 - (Ruby only) Gems cannot be used globally on Arch due to different installation paths, please refer to <a href="https://wiki.archlinux.org/title/ruby#RubyGems"> this</a> to be able to use gems globally.
 - 
 - ... (to be continued.)
+
+# Notes: this is only a provisional version, I'm putting this on a Rails like web client some time later.
